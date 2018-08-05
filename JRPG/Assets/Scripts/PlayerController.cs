@@ -12,21 +12,23 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		Move();
 	}
 
 	void Move()
 	{
-		
 
-		if(Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+		if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
 		{
 			float distance = Speed * Time.deltaTime;
+
 			float z = Input.GetAxis("Vertical") * distance;
 			float x = Input.GetAxis("Horizontal") * distance;
 
 			transform.Translate(x, 0, z);
+
 		}
 
 	}
